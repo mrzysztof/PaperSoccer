@@ -1,17 +1,24 @@
-name := """PlayStarter"""
-organization := "km"
+lazy val akkaHttpVersion = "10.2.8"
+lazy val akkaVersion    = "2.6.18"
 
-version := "1.0-SNAPSHOT"
+fork := true
 
-lazy val root = (project in file(".")).enablePlugins(PlayScala)
+lazy val root = (project in file(".")).
+  settings(
+    inThisBuild(List(
+      organization    := "km",
+      scalaVersion    := "2.13.4"
+    )),
+    name := "PaperSoccer",
+    libraryDependencies ++= Seq(
+      "com.typesafe.akka" %% "akka-http"                % akkaHttpVersion,
+      "com.typesafe.akka" %% "akka-http-spray-json"     % akkaHttpVersion,
+      "com.typesafe.akka" %% "akka-actor-typed"         % akkaVersion,
+      "com.typesafe.akka" %% "akka-stream"              % akkaVersion,
+      "ch.qos.logback"    % "logback-classic"           % "1.2.3",
 
-scalaVersion := "2.13.8"
-
-libraryDependencies += guice
-libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "5.0.0" % Test
-
-// Adds additional packages into Twirl
-//TwirlKeys.templateImports += "km.controllers._"
-
-// Adds additional packages into conf/routes
-// play.sbt.routes.RoutesKeys.routesImport += "km.binders._"
+      "com.typesafe.akka" %% "akka-http-testkit"        % akkaHttpVersion % Test,
+      "com.typesafe.akka" %% "akka-actor-testkit-typed" % akkaVersion     % Test,
+      "org.scalatest"     %% "scalatest"                % "3.1.4"         % Test
+    )
+  )

@@ -1,0 +1,75 @@
+* {margin: 0;}
+
+body {
+    height: 100vh;
+}
+
+.root {
+    height: 100%;
+    width: min(72vh, 100vw);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    font-size: 9vh;
+    font-family: monospace;
+    text-align: center;
+    padding-top: 15%;
+}
+
+img {
+    height: 10vh;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 50vh;
+    padding-top: 5%;
+}
+
+.menu button{
+    height: 10vh;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    background-color: #FFFFFF;
+    border: 1px solid #222222;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: #222222;
+    cursor: pointer;
+    font-family: monospace;
+    font-size: 3vh;
+    font-weight: 600;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+button:focus-visible {
+  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
+  transition: box-shadow .2s;
+}
+
+button:active {
+  background-color: #F7F7F7;
+  border-color: #000000;
+  transform: scale(.96);
+}
+
+button:hover {
+    background-color: #DDDDDD;
+    border-color: #000000;
+    border-width: 2px;
+}

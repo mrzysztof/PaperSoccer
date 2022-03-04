@@ -5,4 +5,7 @@ target
 tmp
 dist
 .cache
+.vscode
+.metals
+.bloop
 RUNNING_PID
