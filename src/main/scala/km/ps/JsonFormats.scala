@@ -1,8 +1,7 @@
-package km
+package km.ps
 
-import km.UserRegistry.ActionPerformed
-
-//#json-formats
+import UserRegistry.ActionPerformed
+import km.ps.UserRegistry.ActionPerformed
 import spray.json.DefaultJsonProtocol
 
 object JsonFormats  {
@@ -14,4 +13,3 @@ object JsonFormats  {
 
   implicit val actionPerformedJsonFormat = jsonFormat1(ActionPerformed)
 }
-//#json-formats

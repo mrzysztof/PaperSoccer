@@ -10,4 +10,6 @@ dist
 .bloop
 .bsp
 .idea
+node_modules
+*.js
 RUNNING_PID

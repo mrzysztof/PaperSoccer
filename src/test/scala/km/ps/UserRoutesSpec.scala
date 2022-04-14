@@ -1,4 +1,4 @@
-package km
+package km.ps
 
 //#user-routes-spec
 //#test-top
